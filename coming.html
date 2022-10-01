@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Coming Soon</title>
+        <link href="./coming.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+        <div class="content">
+            <div class="wrapper">
+                <div class="coming-soon-container1">
+                    <div class="navBar">
+                        <img src="./images/Gamermatch Logo.png" alt="Twitter" class="GamermatchLogo" />
+                    </div>
+                    <div class="leftSection">
+                        <div class="Title">
+                            <h1>Coming Soon</h1>
+                        </div>
+                        <div class="Timer">
+                            <div id="clockdiv">
+                                <div>
+                                    <span class="days" id="day"></span>
+                                    <div class="smalltext">Days</div>
+                                </div>
+                                <div>
+                                    <span class="hours" id="hour"></span>
+                                    <div class="smalltext">Hours</div>
+                                </div>
+                                <div>
+                                    <span class="minutes" id="minute"></span>
+                                    <div class="smalltext">Minutes</div>
+                                </div>
+                                <div>
+                                    <span class="seconds" id="second"></span>
+                                    <div class="smalltext">Seconds</div>
+                                </div>
+                            </div>
+
+                            <p id="demo"></p>
+
+                            <script>
+                                var deadline = new Date('Nov 5, 2022 18:00:00').getTime();
+
+                                var x = setInterval(function () {
+                                    var now = new Date().getTime();
+                                    var t = deadline - now;
+                                    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                                    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                                    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                                    document.getElementById('day').innerHTML = days < 10 ? '0' + days : days;
+                                    document.getElementById('hour').innerHTML = hours < 10 ? '0' + hours : hours;
+                                    document.getElementById('minute').innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                                    document.getElementById('second').innerHTML = seconds < 10 ? '0' + seconds : seconds;
+                                    if (t < 0) {
+                                        clearInterval(x);
+                                        document.getElementById('demo').innerHTML = 'TIME UP';
+                                        document.getElementById('day').innerHTML = '0';
+                                        document.getElementById('hour').innerHTML = '0';
+                                        document.getElementById('minute').innerHTML = '0';
+                                        document.getElementById('second').innerHTML = '0';
+                                    }
+                                }, 1000);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="rightSection">
+                        <img src="./images/Cashmatch Illustration 2.png" alt="Cash Match Image" class="CashmatchIllustration" />
+                    </div>
+                </div>
+                <div class="Socials">
+                    <a href="https://twitter.com/GamerMatchGG" target="_blank">
+                        <img src="./images/twitter.png" alt="Twitter" class="Twitter" />
+                    </a>
+                    <a href="https://www.discord.com/" target="_blank">
+                        <img src="./images/discord.png" alt="Discord" class="Discord" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

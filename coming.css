@@ -1,0 +1,226 @@
+html,
+body{
+  background-color: #191919;
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+}
+*, *::before, *::after { 
+  margin: 0;
+  padding: 0; 
+}
+
+h1 {
+  margin: 0px;
+}
+
+.content {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden; 
+  padding: 4em;
+  box-sizing: border-box;
+  align-content: center;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  max-width: 2400px;
+}
+
+.coming-soon-container1{
+  flex: 0 0 auto;
+  height: 95%; 
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 50%;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  padding: 3em;
+  width: 50%;
+}
+
+.CashmatchIllustration {
+  width: 100%;
+  max-width:900px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 4em;
+  left: 4em
+} 
+
+.GamermatchLogo {
+  width: 50px;
+  object-fit: cover;
+}
+
+.Title {
+  color: #f6f6f6;
+  font-size: 4em;
+  line-height: 200%;
+  cursor: default;
+  margin-bottom: 1em;
+}
+
+#clockdiv{
+  font-family: sans-serif;
+  display: flex;
+  font-weight: 100;
+  text-align: center;
+  grid-column-gap: 16px;
+  cursor: default;
+}
+
+#clockdiv > div{
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 5em;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
+
+#clockdiv div > span{
+  padding: 5px;
+  border-radius: 3px; 
+  display: flex;
+  color: #ec4e20;
+}
+.smalltext{
+  padding-top: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F6F6F6;
+}
+
+.Socials {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  grid-column-gap: 2em;
+  justify-content: center;
+  height: 50px;
+}
+.Twitter {
+  width: 30px;
+  object-fit: cover;
+}
+
+.Twitter:hover {
+  filter: drop-shadow(0 0 10px rgba(236, 78, 32, 0.59));
+}
+
+.Discord {
+  width: 30px;
+  object-fit: cover;
+}
+
+.Discord:hover {
+  filter: drop-shadow(0 0 10px rgba(236, 78, 32, 0.59));
+}
+
+#day:hover{
+  text-shadow: 0 0 30px rgba(236, 78, 32, 0.59);
+}
+#hour:hover{
+  text-shadow: 0 0 30px rgba(236, 78, 32, 0.59);
+}
+#minute:hover{
+  text-shadow: 0 0 30px rgba(236, 78, 32, 0.59);
+}
+#second:hover{
+  text-shadow: 0 0 30px rgba(236, 78, 32, 0.59);
+} 
+
+@media only screen and (max-width: 1300px) {
+  .rightSection{
+    display: none;
+  }
+
+  .coming-soon-container1 {
+    width: 100%;  
+  }
+
+  .leftSection {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .Title {
+    text-align: center;
+
+  }
+
+  #clockdiv {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+.content {
+  padding: 2em;
+}
+
+  #clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: flex;
+    font-weight: 100;
+    text-align: center;
+    grid-column-gap: 16px;
+    cursor: default;
+  }
+
+  #clockdiv > div{
+    font-size: 2.5em;
+  }
+
+  .leftSection {
+    grid-row-gap: 3em;
+  }
+
+  .Title {
+    padding: 0;
+    font-size: 2em;
+  }
+
+  .navBar {
+    top: 2em;
+    left: 2em;
+  }
+
+  .content {
+    height: 95vh;
+  }
+
+}
+
+@media only screen and (min-width: 2000px) {
+.rightSection{
+  justify-content: center;
+}
+}
